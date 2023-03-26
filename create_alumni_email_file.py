@@ -9,8 +9,10 @@ def is_valid_email(email):
 def create_alumni_email_file():
     # Read all .txt and .csv files in the past_member_files directory
     raw_emails = []
+    print ('Checking past_member_files directory')
     for filename in os.listdir('past_member_files'):
         if filename.endswith('.txt') or filename.endswith('.csv'):
+            print ('Reading file:', filename)
             with open(os.path.join('past_member_files', filename), 'r') as f:
                 file_content = f.read()
                 # Extract all valid emails from the file content
@@ -19,6 +21,7 @@ def create_alumni_email_file():
 
     # Remove duplicate emails
     raw_emails = list(set(raw_emails))
+    print (raw_emails.count, 'emails in raw_emails')
 
     # Read all .txt and .csv files in the current_members directory
     current_members = []
@@ -42,4 +45,8 @@ def create_alumni_email_file():
             alumni_emails.append(email)
 
     with open('alumni_emails.txt', 'w') as f:
+        print ('Emails to write:', alumni_emails)
         f.write(','.join(alumni_emails))
+        print ("File written")
+
+create_alumni_email_file()
