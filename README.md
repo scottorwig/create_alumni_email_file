@@ -1,9 +1,14 @@
 # create_alumni_email_file
-Using a raw text file of emails, a file of current user's emails, and an ignore list of emails, creates a file of alumni users
-and puts the addresses in a file so that they can be pasted into the BCC field of a promotional 
-email to alumni.
+This code was developed for use by a high school sports team that uses parent and athelete email
+distribution lists. The lists are repopulated each season, but text files remain from each season
+of the people on each list. We want to generate a comma-seprated list of emails of 
+parents and athletes were are no longer on the team for use in future fundraising.
 
-Start with a raw text file of email addresses in a text file called "raw_emails.txt", consisting of email addresses 
+Using directory of .txt files containing emails, a file of current user's emails, and an ignore list of emails, 
+creates a file of alumni emails and puts the addresses in a file so that they can be pasted into 
+the BCC field of a promotional  email to alumni.
+
+Start with a directory called "email_files" and put .txt files that contains email addresses from past seasons.
 from older mailing lists  used for a school team over the years. 
 Extracts only valid addresses from the file. 
 Those addresses are then compared to two other files, 
