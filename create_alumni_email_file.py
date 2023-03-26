@@ -1,3 +1,4 @@
+import os
 import re
 
 def is_valid_email(email):
@@ -6,8 +7,16 @@ def is_valid_email(email):
     return re.search(regex, email)
 
 def create_alumni_email_file():
-    with open('raw_emails.txt', 'r') as f:
-        raw_emails = f.read().splitlines()
+    # Read all text files in the email_files directory
+    raw_emails = []
+    for filename in os.listdir('email_files'):
+        if filename.endswith('.txt'):
+            with open(os.path.join('email_files', filename), 'r') as f:
+                raw_emails.extend(f.read().splitlines())
+
+    # Remove duplicate emails
+    raw_emails = list(set(raw_emails))
+
     with open('current_members.txt', 'r') as f:
         current_members = f.read().splitlines()
     with open('do_not_email.txt', 'r') as f:
