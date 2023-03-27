@@ -1,11 +1,12 @@
 # create_alumni_email_file
 This code was developed for use by a high school sports team that uses parent and athelete email
-distribution lists. The lists are repopulated each season, but text files remain from each season
+distribution lists. The lists are repopulated each season, but text files remain from past seasons
 of the people on each list. We want to generate a comma-seprated list of emails of 
 parents and athletes were are no longer on the team for use in future fundraising.
 
-Using directory of .txt files containing emails, a directory of current user's emails, and an ignore list of emails, 
-creates a file of alumni emails and puts the addresses in a file so that they can be pasted into 
+Using directory of .txt and .csv files containing emails, a directory of current user's emails, 
+and an ignore list of emails, this code creates a file of alumni emails 
+and puts the addresses in a file so that they can be pasted into 
 the BCC field of a promotional  email to alumni.
 
 Start with a directory called "past_member_files" and put into it .txt and .csv files
