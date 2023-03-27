@@ -4,7 +4,7 @@ distribution lists. The lists are repopulated each season, but text files remain
 of the people on each list. We want to generate a comma-seprated list of emails of 
 parents and athletes who are no longer on the team for use in future fundraising.
 
-Using directory of .txt and .csv files containing emails, a directory of current member's emails, 
+Using a directory of .txt and .csv files containing legacy emails, a directory of current member's emails, 
 and an ignore list of emails, this code creates a file of alumni emails 
 and puts the addresses in a file with commas seperators so that they can be pasted into 
 the BCC field of a promotional  email to alumni.
